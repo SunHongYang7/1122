@@ -1,16 +1,23 @@
 #include <stdio.h>
 int main()
 {
-int a,b,c;
-char x;//x是标点符号输入
-scanf("%d%c%d",&a,&x,&b);
-switch(x)
-{
-case '+':c=a+b;break;
-case '-':c=a-b;break;
-case '*':c=a*b;break;
-case '/':c=a/b;break;
-}
-printf("answer=%d",c);
+int a,b,answer ;
+char x,y;//x是运算符号输入
+scanf("%d%c",&a,&x);
+while(x!='=')
+    {
+        scanf("%d%c",&b,&y);
+        switch(x)
+        {
+        case '+':answer=a+b;break;
+        case '-':answer=a-b;break;
+        case '*':answer=a*b;break;
+        case '/':answer=a/b;break;
+        }
+    a=answer;
+    x=y;
+    }
+    printf("answer=%d",answer);
     return 0;
 } 
+//可执行单次的加减乘除，不要输“=”
