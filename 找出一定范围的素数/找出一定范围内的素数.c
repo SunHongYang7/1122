@@ -6,7 +6,7 @@ int main()
 	scanf("%d %d",&a,&b);
 	for(c=a;c<b+1;c++){
 	if(isprime(c)==1)
-		printf("%dis prime\n",c );}
+		printf("%d is prime\n",c );}
 	 return 0;
 }
 int isprime(int i)                          //定义函数，检验一个数是不是素数// 
